@@ -5,11 +5,9 @@ export const metadata = {
   title: 'Maison de la mascotte',
 }
 
-export default function RootLayout({
-  children,
-}: PropsWithChildren) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="fr">
+    <html lang='fr'>
       <body>{children}</body>
     </html>
   )
