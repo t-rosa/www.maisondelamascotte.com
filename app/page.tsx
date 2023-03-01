@@ -1,3 +1,4 @@
+import { Contact } from "@/components/contact";
 import { Faq } from "@/components/faq";
 import { Gallery } from "@/components/gallery";
 import { Hero } from "@/components/hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <Places />
       <Testimonials />
       <Faq />
+      <Contact />
     </main>
   )
 }
