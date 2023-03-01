@@ -4,7 +4,7 @@ import { AspectRatio } from "./ui/aspect-ratio"
 
 export function Places() {
   return (
-    <section id="places" className="grid place-items-center h-[calc(100vh-4rem)]">
+    <section id="places" className="grid place-items-center min-h-[calc(100vh-4rem)]">
       <div>
         <header>
           <h2 className="shrink-0 font-allura text-4xl tracking-tight sm:text-6xl md:text-7xl lg:text-8xl text-center">Visitez les alentours</h2>

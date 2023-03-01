@@ -11,14 +11,26 @@ module.exports = {
         allura: ['var(--font-allura)']
       },
       keyframes: {
-        "slide-right": {
+        "marquee": {
           from: {
-            transform: "none"
+            transform: "translateX(0)"
           },
           to: {
-            transform: "translateX(calc(var(--i)+100)%)"
+            transform: "translateX(-100%)"
+          }
+        },
+        "marquee2": {
+          from: {
+            transform: "translateX(100%)"
+          },
+          to: {
+            transform: "translateX(0)"
           }
         }
+      },
+      animation: {
+        marquee: 'marquee 60s linear infinite',
+        "marquee2": 'marquee2 60s linear infinite'
       }
 
     },
