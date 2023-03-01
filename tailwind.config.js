@@ -9,7 +9,18 @@ module.exports = {
     extend: {
       fontFamily: {
         allura: ['var(--font-allura)']
+      },
+      keyframes: {
+        "slide-right": {
+          from: {
+            transform: "none"
+          },
+          to: {
+            transform: "translateX(calc(var(--i)+100)%)"
+          }
+        }
       }
+
     },
   },
   plugins: [

@@ -18,13 +18,11 @@ const allura = Allura({
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang='fr' className={`${allura.variable}`}>
+    <html lang='fr' className={`${allura.variable} scroll-smooth`}>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <main className="pt-16">
-            {children}
-          </main>
+          {children}
         </ThemeProvider>
         <Toaster />
       </body>

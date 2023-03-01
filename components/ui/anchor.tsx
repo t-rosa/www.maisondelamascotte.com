@@ -18,6 +18,8 @@ const anchorVariants = cva(
         ghost:
           "bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:text-zinc-100 dark:hover:text-zinc-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent",
         link: "bg-transparent dark:bg-transparent underline-offset-4 hover:underline text-zinc-900 dark:text-zinc-100 hover:bg-transparent dark:hover:bg-transparent",
+        transparent:
+          "backdrop-blur border-2 text-zinc-900 border-indigo-400",
       },
       size: {
         default: "h-10 py-2 px-4",
