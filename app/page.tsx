@@ -5,6 +5,7 @@ import { Hero } from "@/components/hero";
 import { Localisation } from "@/components/localisation";
 import { Places } from "@/components/places";
 import { Testimonials } from "@/components/testimonials";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Faq />
       <Contact />
       <Localisation />
+      <Footer />
     </main>
   )
 }

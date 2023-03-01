@@ -1,6 +1,6 @@
-export function footer() {
+export function Footer() {
   return (
-    <footer className="grid place-items-center gap-3 border-t py-12 font-sans">
+    <footer className="mt-10 grid place-items-center gap-3 border-t py-12 font-sans">
       <a href="#" className="duration-100 hover:text-indigo-800">
         Accueil
       </a>
