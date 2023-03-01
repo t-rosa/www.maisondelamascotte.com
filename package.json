@@ -27,6 +27,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.3",
     "rlayers": "^1.4.8",
+    "sharp": "^0.31.3",
     "tailwind-merge": "^1.10.0",
     "tailwindcss-animate": "^1.0.5",
     "zod": "^3.20.6"
