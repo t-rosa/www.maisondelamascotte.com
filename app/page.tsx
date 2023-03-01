@@ -1,3 +1,4 @@
+import { Faq } from "@/components/faq";
 import { Gallery } from "@/components/gallery";
 import { Hero } from "@/components/hero";
 import { Places } from "@/components/places";
@@ -10,6 +11,7 @@ export default function Home() {
       <Gallery />
       <Places />
       <Testimonials />
+      <Faq />
     </main>
   )
 }
