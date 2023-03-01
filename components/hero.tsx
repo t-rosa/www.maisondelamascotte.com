@@ -19,10 +19,10 @@ export function Hero() {
           <div>
             <h1 className="shrink-0 font-allura text-4xl tracking-tight sm:text-6xl md:text-7xl lg:text-8xl text-black">Bienvenue en Provence</h1>
             <div className="flex flex-col gap-3 mt-10 justify-items-center items-center">
-              <Anchor variant="transparent" href="#contact" size="xl" className="w-2/3 text-4xl rounded-none">
+              <Anchor variant="transparent" href="#contact" size="xl" className="font-bold w-2/3 text-4xl rounded-none">
                 Contact
               </Anchor>
-              <Anchor variant="transparent" href="#gallery" size="xl" className="w-2/3 text-4xl rounded-none" >
+              <Anchor variant="transparent" href="#gallery" size="xl" className="font-bold w-2/3 text-4xl rounded-none" >
                 Découvrir
               </Anchor>
             </div>
