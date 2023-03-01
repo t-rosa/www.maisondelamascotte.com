@@ -2,7 +2,7 @@ import { testimonials } from "@/lib/testimonials"
 
 export function Testimonials() {
   return (
-    <section className="mt-10 container mx-auto">
+    <section id="places" className="mt-10 container mx-auto">
       <header>
         <h2 className="shrink-0 font-allura text-4xl tracking-tight sm:text-6xl md:text-7xl lg:text-8xl text-center">Laissez vous guider par vos hôtes</h2>
       </header>
