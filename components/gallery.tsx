@@ -41,8 +41,8 @@ export function Gallery() {
             ))
           }
           <div className="absolute inset-0 flex justify-between items-center">
-            <Button variant="slider" onClick={previous} className="h-full" disabled={index === 0}><ChevronLeft /></Button>
-            <Button variant="slider" onClick={next} className="h-full" disabled={index === gallery.length - 1}><ChevronRight /></Button>
+            <Button onClick={previous} className="h-full rounded-none opacity-95" disabled={index === 0}><ChevronLeft /></Button>
+            <Button onClick={next} className="h-full rounded-none opacity-95" disabled={index === gallery.length - 1}><ChevronRight /></Button>
           </div>
         </ul>
       </div>

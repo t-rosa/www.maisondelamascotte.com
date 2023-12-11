@@ -1,10 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  transpilePackages: ['ol', 'rlayers'],
-  experimental: {
-    esmExternals: 'loose',
-    appDir: true,
-  },
-}
+const nextConfig = {}
 
 module.exports = nextConfig

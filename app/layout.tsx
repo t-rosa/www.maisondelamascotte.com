@@ -1,9 +1,6 @@
-import { Header } from "@/components/header"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from '@/components/ui/toaster'
-import '@/styles/globals.css'
 import { Allura } from "next/font/google"
 import { type PropsWithChildren } from 'react'
+import './globals.css'
 
 export const metadata = {
   title: 'Maison de la mascotte',
@@ -20,11 +17,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='fr' className={`${allura.variable} scroll-smooth`}>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
           {children}
-        </ThemeProvider>
-        <Toaster />
       </body>
     </html>
   )
