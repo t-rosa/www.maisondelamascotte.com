@@ -14,9 +14,11 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/poppins": "^5.0.14",
     "@fontsource/sacramento": "^5.0.20",
-    "@fontsource/satisfy": "^5.0.19",
     "@fontsource/the-nautigal": "^5.0.20",
     "astro": "^4.12.2",
+    "astro-carousel": "^2.0.8"
+  },
+  "devDependencies": {
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.4"
   }

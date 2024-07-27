@@ -1,5 +1,55 @@
 ---
+import type { ComponentProps } from "astro/types";
+import { Carousel } from "astro-carousel";
+
 import RootLayout from "@/layouts/root.astro";
+
+const images: ComponentProps<typeof Carousel>["images"] = [
+	{
+		src: "/hero.jpg",
+		alt: "",
+		width: 1920,
+		height: 1080,
+		widths: [200, 675, 1350],
+	},
+	{
+		src: "/hero.jpg",
+		alt: "",
+		width: 1080,
+		height: 1920,
+		widths: [200, 675, 1350],
+	},
+	{
+		src: "/hero.jpg",
+		alt: "",
+		width: 1080,
+		height: 1920,
+		widths: [200, 675, 1350],
+	},
+	{
+		src: "/hero.jpg",
+		alt: "",
+		width: 1080,
+		height: 1920,
+		widths: [200, 675, 1350],
+	},
+	{
+		src: "/hero.jpg",
+		alt: "",
+		width: 1080,
+		height: 1920,
+		widths: [200, 675, 1350],
+	},
+	{
+		src: "/hero.jpg",
+		alt: "",
+		width: 1080,
+		height: 1920,
+		widths: [200, 675, 1350],
+	},
+];
+
+import ChevronDownIcon from "@/components/icons/chevron-down-icon.astro";
 ---
 
 <RootLayout>
@@ -33,13 +83,28 @@ import RootLayout from "@/layouts/root.astro";
 			>
 				La Maison d'hôte provençale et généreuse
 			</p>
-			<a
-				data-discover
-				href="#discover"
-				class="mt-48 font-title text-5xl px-6 py-3 border-lavande/20 bg-lavande/10 rounded-full duration-200 border hover:text-lavande hover:scale-105 text-zinc-700"
-				>Démarrer la visite</a
-			>
+			<Carousel images={images} />
+			<div class="flex flex-col gap-12 mt-48 items-center">
+				<a
+					data-discover
+					href={`./?image=${0}`}
+					class="text-center font-title text-5xl px-6 py-3 border-lavande/20 bg-lavande/10 rounded-full duration-200 border hover:text-lavande hover:scale-105 text-zinc-700"
+					>Visiter les lieux</a
+				>
+				<a
+					data-discover
+					href="#discover"
+					class="text-3xl font-title hover:scale-90 duration-200 [&>svg]:duration-200 [&>svg]:hover:stroke-lavande"
+				>
+					<ChevronDownIcon width="96" height="96" />
+				</a>
+			</div>
 		</div>
 	</section>
-	<section id="discover" class="h-dvh bg-green-500"></section>
+	<section id="discover" class="h-dvh py-24">
+		<h2 class="font-title text-8xl text-center">Parcourez la provence</h2>
+		<ul class="grid grid-cols-2">
+			<li></li>
+		</ul>
+	</section>
 </RootLayout>
