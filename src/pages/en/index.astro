@@ -1,5 +1,117 @@
 ---
+import type { ComponentProps } from "astro/types";
+import { Image } from "astro:assets";
+import { Carousel } from "astro-carousel";
 import RootLayout from "@/layouts/root.astro";
+import ChevronDownIcon from "@/components/icons/chevron-down-icon.astro";
+import { testimonials } from "@/lib/testimonials";
+import StarIcon from "@/components/icons/star-icon.astro";
+
+const carouselImages: ComponentProps<typeof Carousel>["images"] = [
+    {
+        src: "/image-1.jpg",
+        alt: "",
+        width: 650,
+        height: 768,
+    },
+    {
+        src: "/image-2.jpg",
+        alt: "",
+        width: 650,
+        height: 768,
+    },
+    {
+        src: "/image-3.jpg",
+        alt: "",
+        width: 650,
+        height: 768,
+    },
+    {
+        src: "/image-4.jpg",
+        alt: "",
+        width: 650,
+        height: 768,
+    },
+    {
+        src: "/image-5.jpg",
+        alt: "",
+        width: 650,
+        height: 768,
+    },
+    {
+        src: "/image-6.jpg",
+        alt: "",
+        width: 650,
+        height: 768,
+    },
+    {
+        src: "/image-7.jpg",
+        alt: "",
+        width: 650,
+        height: 768,
+    },
+];
+
+interface PlacesProps {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    city: string;
+    link: string;
+}
+
+const placesImage: PlacesProps[] = [
+    {
+        src: "/saint-remy.jpg",
+        alt: "",
+        width: 300,
+        height: 1041,
+        city: "Saint Rémy",
+        link: "https://www.google.fr/maps/place/13210+Saint-R%C3%A9my-de-Provence/@43.7815916,4.8103769,13z/data=!3m1!4b1!4m5!3m4!1s0x12b5e431ac6048f3:0xb5f2d15b520e77dd!8m2!3d43.788652!4d4.831343",
+    },
+    {
+        src: "/baux.jpg",
+        alt: "",
+        width: 300,
+        height: 1041,
+        city: "Baux-de-Provence",
+        link: "https://www.google.fr/maps/place/13520+Les+Baux-de-Provence/@43.7491691,4.7874773,14z/data=!3m1!4b1!4m5!3m4!1s0x12b5e15dd86ab221:0x40819a5fd9704e0!8m2!3d43.743887!4d4.795495",
+    },
+    {
+        src: "/avignon.jpg",
+        alt: "",
+        width: 300,
+        height: 1041,
+        city: "Avignon",
+        link: "https://www.google.com/maps/place/Avignon/@43.9416581,4.7630461,12z/data=!3m1!4b1!4m5!3m4!1s0x12b5eb8739bc9d07:0xe6429b6efa1d7b36!8m2!3d43.949317!4d4.805528",
+    },
+    {
+        src: "/marseille.jpg",
+        alt: "",
+        width: 300,
+        height: 1041,
+        city: "Marseille",
+        link: "https://www.google.com/maps/place/Marseille/@43.2804488,5.3104371,12z/data=!3m1!4b1!4m5!3m4!1s0x12c9bf4344da5333:0x40819a5fd970220!8m2!3d43.296482!4d5.36978",
+    },
+    {
+        src: "/pont-du-gard.jpg",
+        alt: "",
+        width: 300,
+        height: 1041,
+        city: "Pont du gard",
+        link: "https://www.google.com/maps/place/Pont+du+Gard/@43.9475698,4.53047,17z/data=!3m1!4b1!4m5!3m4!1s0x12b5c8c248e704d5:0x26b17319f386eae2!8m2!3d43.947566!4d4.53496",
+    },
+
+    {
+        src: "/nimes.jpg",
+        alt: "",
+        width: 300,
+        height: 1041,
+        city: "Nîmes",
+        link: "https://www.google.com/maps/place/N%C3%AEmes/@43.8321891,4.1991637,12z/data=!3m1!4b1!4m5!3m4!1s0x12b42d0bd6e85339:0xde88134f9f200c03!8m2!3d43.836699!4d4.360054",
+    },
+];
 ---
 
 <RootLayout>
@@ -31,17 +143,112 @@ import RootLayout from "@/layouts/root.astro";
             <p
                 class="font-subtitle text-zinc-700 max-w-52 sm:max-w-max text-center text-3xl underline underline-offset-4"
             >
-                La Maison d'hôte provençale et généreuse
+                The generous "Provencal" guest house
             </p>
-            <a
-                data-discover
-                href="#discover"
-                class="mt-48 font-title text-5xl px-6 py-3 border-lavande/20 bg-lavande/10 rounded-full duration-200 border hover:text-lavande hover:scale-105 text-zinc-700"
-                >Démarrer la visite</a
-            >
+            <Carousel images={carouselImages} />
+            <div class="flex flex-col gap-12 mt-48 items-center">
+                <a
+                    data-discover
+                    href={`./?image=${0}`}
+                    class="text-center font-title text-5xl px-6 py-3 border-lavande/20 bg-lavande/10 rounded-full duration-200 border hover:text-lavande hover:scale-105 text-zinc-700"
+                    >Take a tour</a
+                >
+                <a
+                    data-discover
+                    href="#discover"
+                    class="text-3xl font-title hover:scale-90 duration-200 [&>svg]:duration-200 [&>svg]:hover:stroke-lavande"
+                >
+                    <ChevronDownIcon width="96" height="96" />
+                </a>
+            </div>
         </div>
     </section>
-    <section id="discover" class="h-dvh grid place-items-center">
-        <img src="hero.jpg" class="size-full" />
+    <section id="discover" class="pt-12">
+        <header>
+            <h2 class="font-title text-5xl sm:text-8xl text-center">
+                Explore the Provence
+            </h2>
+        </header>
+        <ul
+            class="grid py-24 justify-center gap-6 lg:grid-cols-[auto_auto_auto] lg:place-items-center"
+        >
+            {
+                placesImage.map((image, index) => (
+                    <li
+                        data-index={index}
+                        class="hover:scale-105 duration-200 group"
+                    >
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href={image.link}
+                            class="grid "
+                        >
+                            <Image
+                                {...image}
+                                class="col-[1/2] row-[1/2] aspect-square border border-lavande p-3 rounded-full group-hover:bg-lavande/50 duration-200"
+                            />
+                            <p class="self-end bg-gradient-to-r from-transparent via-zinc-800/50 to-transparent text-zinc-100 text-2xl justify-self-center mb-12 grid place-items-center col-[1/2] row-[1/2]">
+                                {image.city}
+                            </p>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+    <section>
+        <header>
+            <h2 class="font-title text-5xl sm:text-8xl text-center">
+                Your opinion matters
+            </h2>
+        </header>
+        <div
+            class="sm:columns-2 sm:text-[0] lg:columns-3 mx-auto pt-12 xl:px-24"
+        >
+            {
+                testimonials.map((testimonial) => (
+                    <div class="pt-8 sm:inline-block sm:w-full px-4 ">
+                        <figure class="rounded-md border-2 border-lavande/50  bg-lavande/10 p-8 text-sm leading-6">
+                            <blockquote class="mt-6 border-l-2 pl-6 italic ">
+                                <p class="text-pretty">{`“${testimonial.textEn}”`}</p>
+                            </blockquote>
+                            <figcaption class="mt-6 flex items-center justify-between">
+                                <div>
+                                    <span class="font-semibold ">
+                                        {testimonial.author}
+                                    </span>
+                                    - {testimonial.country}
+                                </div>
+                                <div class="flex">
+                                    <StarIcon />
+                                    <StarIcon />
+                                    <StarIcon />
+                                    <StarIcon />
+                                    <StarIcon />
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+    <section class="py-24">
+        <header class="grid place-items-center gap-9">
+            <h2 class="font-title text-5xl sm:text-8xl text-center">
+                Any questions?
+            </h2>
+            <p
+                class="font-subtitle text-zinc-700 max-w-52 sm:max-w-max text-center text-4xl underline underline-offset-4"
+            >
+                Contact us by e-mail!
+            </p>
+            <a
+                href="mailto:nathaliebardelli13@gmail.com"
+                class="text-center text-xl px-6 py-3 border-lavande/20 from-transparent via-lavande/20 to-transparent bg-gradient-to-r duration-200 border-b hover:text-lavande text-zinc-700"
+                >nathaliebardelli13@gmail.com</a
+            >
+        </header>
     </section>
 </RootLayout>
