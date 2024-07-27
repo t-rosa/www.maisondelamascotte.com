@@ -1,5 +1,5 @@
 ---
-import "@fontsource/poppins";
+import "@fontsource/sacramento";
 import "@fontsource/the-nautigal";
 import "@/index.css";
 
@@ -9,7 +9,7 @@ const content =
         : "Découvrez notre charmante maison d'hôtes en Provence, au cœur du sud de la France. Profitez de chambres confortables, d'une belle piscine et d'une expérience authentique provençale. Idéal pour des vacances relaxantes et des escapades romantiques.";
 ---
 
-<html lang={Astro.currentLocale} class="h-full bg-zinc-100">
+<html lang={Astro.currentLocale} class="h-full bg-zinc-100 scroll-smooth">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,7 +18,7 @@ const content =
         <meta name="description" content={content} />
         <title>Maison de la mascotte</title>
     </head>
-    <body class="bg-[url('/papyrus.png')] h-full text-zinc-800">
+    <body class="bg-[url('/papyrus.png')] h-full text-zinc-800 scroll-smooth">
         <div id="container" class="h-full">
             <slot />
         </div>

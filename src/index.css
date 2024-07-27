@@ -5,9 +5,15 @@
 #container {
     background: radial-gradient(
         farthest-corner circle,
-        #F8B5007e 0%,
-        #FCEABB6c 50%,
+        #f8b600d0 0%,
+        #FCEABBd0 40%,
         #FFFFFF2f 70%
     )
     bottom right / 250% 350%;
+
+    transition-duration: 1000ms;
+}
+
+#container:has([data-discover]:hover) {
+    @apply bg-[center_bottom];
 }

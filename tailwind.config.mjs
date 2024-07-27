@@ -8,6 +8,7 @@ export default {
 			fontFamily: {
 				sans: ["Poppins", ...defaultTheme.fontFamily.sans],
 				title: ["The Nautigal", ...defaultTheme.fontFamily.sans],
+				subtitle: ["Sacramento", ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
 				lavande: "#9683EC",

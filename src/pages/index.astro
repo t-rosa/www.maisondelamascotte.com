@@ -1,21 +1,45 @@
 ---
-import Header from "@/components/header.astro";
 import RootLayout from "@/layouts/root.astro";
 ---
 
 <RootLayout>
-	<Header>
-		<a href="/en" title="Anglais">
-			<img
-				src="/gb.svg"
-				class="size-9 rounded-full border border-zinc-700"
-			/>
-		</a>
-	</Header>
-	<img
-		src="/hero.jpg"
-		alt="Un champs de lavande"
-		class="border-2 border-lavande rounded-sm"
-	/>
-	<h2>test</h2>
+	<section class="h-dvh flex flex-col items-center gap-24">
+		<header class="h-20 flex items-center justify-end mx-auto w-11/12">
+			<div class="flex gap-3 items-center">
+				<a
+					data-locale={Astro.currentLocale}
+					href="/"
+					title="Français"
+					class="data-[locale=fr]:border-4 border-lavande rounded-full hover:scale-110 duration-200"
+				>
+					<img src="/fr.svg" class="size-7 rounded-full" />
+				</a>
+				<a
+					data-locale={Astro.currentLocale}
+					href="/en"
+					title="Anglais"
+					class="data-[locale=en]:border-4 border-lavande rounded-full hover:scale-110 duration-200"
+				>
+					<img src="/gb.svg" class="size-7 rounded-full border" />
+				</a>
+			</div>
+		</header>
+		<div class="grid place-items-center gap-6">
+			<h1 class="font-title text-5xl sm:text-8xl">
+				Maison de la mascotte
+			</h1>
+			<p
+				class="font-subtitle text-zinc-700 max-w-52 sm:max-w-max text-center text-3xl underline underline-offset-4"
+			>
+				La Maison d'hôte provençale et généreuse
+			</p>
+			<a
+				data-discover
+				href="#discover"
+				class="mt-48 font-title text-5xl px-6 py-3 border-lavande/20 bg-lavande/10 rounded-full duration-200 border hover:text-lavande hover:scale-105 text-zinc-700"
+				>Démarrer la visite</a
+			>
+		</div>
+	</section>
+	<section id="discover" class="h-dvh bg-green-500"></section>
 </RootLayout>
