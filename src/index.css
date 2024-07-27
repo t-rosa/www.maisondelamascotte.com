@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#container {
+    background: radial-gradient(
+        farthest-corner circle,
+        #F8B5007e 0%,
+        #FCEABB6c 50%,
+        #FFFFFF2f 70%
+    )
+    bottom right / 250% 350%;
+}

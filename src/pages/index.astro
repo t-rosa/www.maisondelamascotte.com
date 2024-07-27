@@ -1,16 +1,15 @@
 ---
-
+import RootLayout from "@/layouts/root.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<RootLayout>
+	<header class="h-20 flex items-center justify-between px-12">
+		<h1 class="font-title text-6xl">Maison de la mascotte</h1>
+	</header>
+	<img
+		src="/hero.jpg"
+		alt="Un champs de lavande"
+		class="border-2 border-lavande rounded-sm"
+	/>
+	<h2>test</h2>
+</RootLayout>

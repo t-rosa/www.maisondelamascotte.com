@@ -1,0 +1,26 @@
+---
+import "@fontsource/poppins";
+import "@fontsource/the-nautigal";
+import "@/index.css";
+
+const content =
+    Astro.currentLocale === "en"
+        ? "Discover our charming guesthouse in Provence, in the heart of the south of France. Enjoy comfortable rooms, a beautiful swimming pool, and an authentic Provençal experience. Perfect for relaxing holidays and romantic getaways."
+        : "Découvrez notre charmante maison d'hôtes en Provence, au cœur du sud de la France. Profitez de chambres confortables, d'une belle piscine et d'une expérience authentique provençale. Idéal pour des vacances relaxantes et des escapades romantiques.";
+---
+
+<html lang={Astro.currentLocale} class="h-full bg-zinc-100">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={content} />
+        <title>Maison de la mascotte</title>
+    </head>
+    <body class="bg-[url('/papyrus.png')] h-full text-zinc-800">
+        <div id="container" class="h-full">
+            <slot />
+        </div>
+    </body>
+</html>
