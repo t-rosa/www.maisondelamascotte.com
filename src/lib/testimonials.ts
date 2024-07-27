@@ -22,7 +22,8 @@ export const testimonials = [
   },
   {
     id: 4,
-    text: "La gentillesse et discrétion de l'hôte , l'environnement est splendide pour des vacances reposantes Piscine et extérieur bien entretenus. Très belle maison confortable et décorée avec goût. Emplacement idéal pour passer des vacances en familles, pleins de parcs à thèmes à faire. Commodité",
+    text: "La gentillesse et discrétion de l'hôte , l'environnement est splendide pour des vacances reposantes Piscine et extérieur bien entretenus. Très belle maison confortable et décorée avec goût. Emplacement idéal pour passer des vacances en familles, pleins de parcs à thèmes à faire",
+    textEn: "The kindness and discretion of the host, the splendid setting for a relaxing vacation. Well-kept pool and grounds. Beautiful, comfortable and tastefully decorated house. Ideal location for a family vacation, lots of theme parks to visit.",
     author: "Odette",
     country: "Belgique"
   },
