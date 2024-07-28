@@ -124,7 +124,13 @@ const placesImage: PlacesProps[] = [
 					title="Français"
 					class="data-[locale=fr]:border-4 border-lavande rounded-full hover:scale-110 duration-200"
 				>
-					<img src="/fr.svg" class="size-7 rounded-full" />
+					<Image
+						width={28}
+						height={28}
+						alt="fr"
+						src="/fr.svg"
+						class="size-7 rounded-full"
+					/>
 				</a>
 				<a
 					data-locale={Astro.currentLocale}
@@ -132,7 +138,13 @@ const placesImage: PlacesProps[] = [
 					title="Anglais"
 					class="data-[locale=en]:border-4 border-lavande rounded-full hover:scale-110 duration-200"
 				>
-					<img src="/gb.svg" class="size-7 rounded-full border" />
+					<Image
+						width={28}
+						height={28}
+						alt="fr"
+						src="/gb.svg"
+						class="size-7 rounded-full border"
+					/>
 				</a>
 			</div>
 		</header>
