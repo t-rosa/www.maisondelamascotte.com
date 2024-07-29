@@ -2,7 +2,6 @@
 import "@fontsource/sacramento";
 import "@fontsource/the-nautigal";
 import "@/index.css";
-import { ViewTransitions } from "astro:transitions";
 
 const content =
     Astro.currentLocale === "en"
@@ -18,7 +17,6 @@ const content =
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={content} />
         <title>Maison de la mascotte</title>
-        <ViewTransitions />
     </head>
     <body class="bg-[url('/papyrus.png')] text-zinc-800 scroll-smooth">
         <div id="container" class="h-full">
